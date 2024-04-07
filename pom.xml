@@ -5,7 +5,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.4</version>
+		<version>3.11.0</version>
+			<configuration>
+			<source>22</source> <!-- JDK source version -->
+			<target>22</target> <!-- JDK target version -->
+			<!-- Or use the release tag if you're compiling to a specific version only -->
+			<release>22</release>
+    	</configuration>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.moviepiracy</groupId>
