@@ -10,38 +10,38 @@ function setupEndpointLinks() {
 
         
         // Add more endpoints as needed
-        { name: 'Get All Banners', path: '/banners', method: 'GET' },
-    { name: 'Get Banner by ID', path: '/banners/{id}', method: 'GET' },
-    { name: 'Get All Movies', path: '/movies', method: 'GET' },
-    { name: 'Get Featured Movies', path: '/movies?featured=true', method: 'GET' },
-    { name: 'Get Movie by ID', path: '/movies/{id}', method: 'GET' },
-    { name: 'Update Movie', path: '/movies/{id}', method: 'PUT', body: {
+        { name: 'Get All Banners', path: 'api/banners', method: 'GET' },
+    { name: 'Get Banner by ID', path: 'api/banners/{id}', method: 'GET' },
+    { name: 'Get All Movies', path: 'api/movies', method: 'GET' },
+    { name: 'Get Featured Movies', path: 'api/movies?featured=true', method: 'GET' },
+    { name: 'Get Movie by ID', path: 'api/movies/{id}', method: 'GET' },
+    { name: 'Update Movie', path: 'api/movies/{id}', method: 'PUT', body: {
         "rentPrice": "12.99"
       }
        },
-    { name: 'Delete Movie', path: '/movies/{id}', method: 'DELETE' },
-    { name: 'Search Movies by Title', path: '/search/movies?title={title}', method: 'GET' },
-    { name: 'Search TV Shows by Title', path: '/search/tvshows?title={title}', method: 'GET' },
-    { name: 'Get All TV Shows', path: '/tvshows', method: 'GET' },
-    { name: 'Get Featured TV Shows', path: '/tvshows/featured', method: 'GET' },
-    { name: 'Get TV Show by ID', path: '/tvshows/{id}', method: 'GET' },
-    { name: 'Update TV Show', path: '/tvshows/{id}', method: 'PUT', body: {
+    { name: 'Delete Movie', path: 'api/movies/{id}', method: 'DELETE' },
+    { name: 'Search Movies by Title', path: 'api/search/movies?title={title}', method: 'GET' },
+    { name: 'Search TV Shows by Title', path: 'api/search/tvshows?title={title}', method: 'GET' },
+    { name: 'Get All TV Shows', path: 'api/tvshows', method: 'GET' },
+    { name: 'Get Featured TV Shows', path: 'api/tvshows/featured', method: 'GET' },
+    { name: 'Get TV Show by ID', path: 'api/tvshows/{id}', method: 'GET' },
+    { name: 'Update TV Show', path: 'api/tvshows/{id}', method: 'PUT', body: {
         "rentPrice": "12.99"
       }
        },
-    { name: 'Delete TV Show', path: '/tvshows/{id}', method: 'DELETE' },
-    { name: 'Create User', path: '/users', method: 'POST', body: {   "id":"15",
+    { name: 'Delete TV Show', path: 'api/tvshows/{id}', method: 'DELETE' },
+    { name: 'Create User', path: 'api/users', method: 'POST', body: {   "id":"15",
     "firstName": "nikita",
     "lastName": "m",
     "email": "nikitam@example.com",
       "password": "nikitam@11"
   } },
-    { name: 'Authenticate User', path: '/auth/login', method: 'POST', body: {
+    { name: 'Authenticate User', path: 'api/auth/login', method: 'POST', body: {
         "email": "nikitam@example.com",
         "password": "nikitam@11"
     } },
-    { name: 'Get User by ID', path: '/users/{id}', method: 'GET' },
-    { name: 'Get User by Email', path: '/users/email/{email}', method: 'GET' },
+    { name: 'Get User by ID', path: 'api/users/{id}', method: 'GET' },
+    { name: 'Get User by Email', path: 'api/users/email/{email}', method: 'GET' },
     ];
 
     const list = document.getElementById('endpoint-list');
@@ -55,7 +55,7 @@ function setupEndpointLinks() {
                 fetchAndDisplayData(endpoint.path, endpoint.method, endpoint.body);
             } else {
                 // Replace {id} with an actual ID or remove it from path if not applicable
-                let path = endpoint.path.replace("{id}", "someId");
+                let path = endpoint.path.replace("{id}", "4");
                 fetchAndDisplayData(path, endpoint.method);
             }
             return false;
