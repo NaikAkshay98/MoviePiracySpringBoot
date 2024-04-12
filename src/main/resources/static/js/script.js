@@ -11,36 +11,38 @@ function setupEndpointLinks() {
         
         // Add more endpoints as needed
         { name: 'Get All Banners', path: 'api/banners', method: 'GET' },
-    { name: 'Get Banner by ID', path: 'api/banners/{id}', method: 'GET' },
+    
     { name: 'Get All Movies', path: 'api/movies', method: 'GET' },
     { name: 'Get Featured Movies', path: 'api/movies?featured=true', method: 'GET' },
-    { name: 'Get Movie by ID', path: 'api/movies/{id}', method: 'GET' },
-    { name: 'Update Movie', path: 'api/movies/{id}', method: 'PUT', body: {
+    //{ name: 'Get Movie by ID', path: 'api/movies/{id}', method: 'GET' },
+    /*{ name: 'Update Movie', path: 'api/movies/{id}', method: 'PUT', body: {
         "rentPrice": "12.99"
       }
        },
-    { name: 'Delete Movie', path: 'api/movies/{id}', method: 'DELETE' },
+    */
+    //{ name: 'Delete Movie', path: 'api/movies/{id}', method: 'DELETE' },
     { name: 'Search Movies by Title', path: 'api/search/movies?title={title}', method: 'GET' },
     { name: 'Search TV Shows by Title', path: 'api/search/tvshows?title={title}', method: 'GET' },
     { name: 'Get All TV Shows', path: 'api/tvshows', method: 'GET' },
     { name: 'Get Featured TV Shows', path: 'api/tvshows/featured', method: 'GET' },
-    { name: 'Get TV Show by ID', path: 'api/tvshows/{id}', method: 'GET' },
-    { name: 'Update TV Show', path: 'api/tvshows/{id}', method: 'PUT', body: {
+    //{ name: 'Get TV Show by ID', path: 'api/tvshows/{id}', method: 'GET' },
+    /*{ name: 'Update TV Show', path: 'api/tvshows/{id}', method: 'PUT', body: {
         "rentPrice": "12.99"
       }
        },
-    { name: 'Delete TV Show', path: 'api/tvshows/{id}', method: 'DELETE' },
+    */
+    //{ name: 'Delete TV Show', path: 'api/tvshows/{id}', method: 'DELETE' },
     { name: 'Create User', path: 'api/users', method: 'POST', body: {   "id":"15",
     "firstName": "nikita",
     "lastName": "m",
     "email": "nikitam@example.com",
       "password": "nikitam@11"
   } },
-    { name: 'Authenticate User', path: 'api/auth/login', method: 'POST', body: {
+    { name: 'Authenticate User', path: 'api/users/authenticate', method: 'POST', body: {
         "email": "nikitam@example.com",
         "password": "nikitam@11"
     } },
-    { name: 'Get User by ID', path: 'api/users/{id}', method: 'GET' },
+    //{ name: 'Get User by ID', path: 'api/users/{id}', method: 'GET' },
     { name: 'Get User by Email', path: 'api/users/email/{email}', method: 'GET' },
     ];
 
